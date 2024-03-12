@@ -23,21 +23,24 @@ class ShareInformationPage extends StatelessWidget {
                       child: Text('Share MobileNo'),
                       onTap: () {
                         print('---->Share MobileNo Clicked');
+                        _shareMobileNo();
                       },
                     ),
                     PopupMenuItem(
                       child: Text('Share Email'),
                       onTap: () {
                         print('---->Share Email Clicked');
+                        _shareEmail();
                       },
                     ),
                     PopupMenuItem(
                       child: Text('Share Address'),
                       onTap: () {
                         print('---->Share Address Clicked');
+                        _shareAddress();
                       },
                     ),
-                  ])
+                  ],),
         ],
       ),
       body: Center(
@@ -66,4 +69,19 @@ class ShareInformationPage extends StatelessWidget {
     print('---------Share Name method calling');
     Share.share('Jaganath M');
    }
+
+   _shareMobileNo() {
+    print('--------Share MobileNo Method Calling');
+    Share.share('+91 84288888340');
+   }
+
+   _shareEmail() {
+    print('-------Share Email Method Calling');
+    Share.share('jagan24298@gmail.com');
+   }
+}
+
+ _shareAddress() {
+  print('------Share Address Method Calling');
+  Share.share('14c,Hasthinapuram road,\n1st cross Street\n,Nanmangalam,Kovilambakkam,\nchennai-600129');
 }
